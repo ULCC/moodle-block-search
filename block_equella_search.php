@@ -58,7 +58,7 @@ class block_equella_search extends block_list {
         }
 
         if (!empty($this->instance->pageid)) {
-            $context = get_context_instance(CONTEXT_COURSE, $this->instance->pageid);
+            $context = context_course::instance($this->instance->pageid);
             if ($COURSE->id == $this->instance->pageid) {
                 $course = $COURSE;
             } else {
