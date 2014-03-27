@@ -65,7 +65,7 @@ class block_equella_search extends block_list {
                 $course = $DB->get_record('course', array('id'=>$this->instance->pageid));
             }
         } else {
-            $context = get_context_instance(CONTEXT_SYSTEM);
+            $context = context_system::instance();
             $course = $SITE;
         }
 
